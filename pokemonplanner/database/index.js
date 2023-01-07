@@ -4,7 +4,6 @@ const { Schema } = mongoose;
 mongoose.connect('mongodb://localhost/pokemon')
 
 const pokemonSchema = new Schema({
-  id: Number,
   userId: String,
   onMyTeam: Boolean,
   inMyLibrary: Boolean,
@@ -12,7 +11,7 @@ const pokemonSchema = new Schema({
   number: Number,
   name: String,
   pic: String,
-  type: String,
+  type: Array,
   level: Number,
   doubleDamageTo: Array,
   doubleDamageFrom: Array,
